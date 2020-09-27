@@ -1,0 +1,25 @@
+{% extends "faceApp/layout.html" %}
+
+{% block heading %}{{ 'Register' }}{% endblock %}
+
+{% block regform %}
+<div style="justify-content:center!important;" class="row">
+<div style="background-color: rgb(255,255,255); color:#000000;" class="col-md-3 ">
+<h2 style="color: red;">Add a new registration</h2>
+<form method="post">
+	<div class="form-group">
+	{{ reg_form.name }}
+	</div>
+	<div class="form-group">
+	{{ reg_form.employee_id }}
+	</div>
+	{% csrf_token %}
+	<p><input type="submit" class="btn btn-success" value="Add registration"></p>
+</form>
+</div>
+</div>
+{% endblock %}
+
+{% block camera %}
+<a class="btn btn-success" role="button" href="{% url 'add_photo' %}">Add Photos</a>
+{% endblock %}

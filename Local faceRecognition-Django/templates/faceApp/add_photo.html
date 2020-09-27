@@ -1,0 +1,19 @@
+{% extends "faceApp/layout.html" %}
+
+{% block heading %}{{ 'Add Photo' }}{% endblock %}
+{%load static%}
+
+{% block camera %}
+<div class="row">
+    <div class="col">
+    	<img src="{% url 'monitor' %}" alt="">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col" style="margin-top:20px ">
+		<a class="btn btn-success" role="button" href="{% url 'cap_img' employee_id %}">Add Photos</a>
+    </div>
+</div>
+
+{% endblock %}

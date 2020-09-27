@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+{%load static%}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Face Recognition Software</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Footer-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+
+<body style="padding: 10px;background-color: rgb(255,255,255);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container"><a class="navbar-brand" href="#">Face Recognition</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation" style="margin-right: 10px;margin-left: 10px;"><a class="btn btn-danger btn-block" role="button" style="margin-left: 10px;margin-right: 10px;" href="/admin/">Admin</a></li>
+                    <li class="nav-item" role="presentation" style="margin-right: 10px;margin-left: 10px;"><a class="btn btn-info btn-block" role="button" style="margin-left: 10px;margin-right: 10px;" href="/register/" >Register</a></li>
+                    <li class="nav-item" role="presentation" style="margin-right: 10px;margin-left: 10px;"><a class="btn btn-warning active btn-block" role="button" style="margin-left: 10px;margin-right: 10px;" href="/" >Identify</a></li>
+                    <li class="nav-item" role="presentation" style="margin-right: 10px;margin-left: 10px;"><a class="btn btn-dark active btn-block" role="button" style="margin-left: 10px;margin-right: 10px;" href="/built_model/" >Build Model</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row text-center" style="margin-top: 30px;padding: 10px;padding-right: 20px;padding-left: 20px;margin-bottom: 30px;">
+        <div class="col">
+            <h1 style="color: rgb(0,0,0);background-color: #ffffff">{% block heading %}{% endblock %}</h1>
+        </div>
+    </div>
+
+    {% block regform %}{% endblock %}
+
+
+    <div class="row text-center" style="margin-top: 30px;padding: 10px;padding-right: 20px;padding-left: 20px;margin-bottom: 30px;">
+        <div class="col">
+            {% block camera %}{% endblock %}
+        </div>
+    </div>
+
+
+    <div class="footer-clean" style="padding: 20px;">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="#">Admin Panel</a></li>
+                            <li><a href="#">Register Panel</a></li>
+                            <li><a href="#">Recognize&nbsp; Panel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col text-center">
+                        <p class="copyright">Face Recognitiom © 2020</p>
+                        <p class="copyright">Developed By Harsh Maheshwari</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
